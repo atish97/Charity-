@@ -6,16 +6,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.getElementById("navToggle");
   const mainNav = document.getElementById("mainNav");
   if (navToggle && mainNav) {
-    navToggle.addEventListener("click", () => {
+    const closeNav = () => {
+      mainNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    };
+
+    navToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       const isOpen = mainNav.classList.toggle("is-open");
       navToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
     mainNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mainNav.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
+      link.addEventListener("click", closeNav);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (
+        mainNav.classList.contains("is-open") &&
+        !mainNav.contains(e.target) &&
+        !navToggle.contains(e.target)
+      ) {
+        closeNav();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mainNav.classList.contains("is-open")) {
+        closeNav();
+      }
     });
   }
 
