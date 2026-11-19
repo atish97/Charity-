@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HopeBridge — Building Hope for a Better Tomorrow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar" id="top">
+    <div class="container navbar__inner">
+      <a href="#top" class="navbar__logo" aria-label="HopeBridge Home">
+        <img src="charity-assets/logo.svg" alt="HopeBridge" width="138" height="24" />
+      </a>
+
+      <nav class="navbar__nav" id="mainNav" aria-label="Primary Navigation">
+        <a href="#top" class="navbar__link navbar__link--active">Home</a>
+        <a href="#about" class="navbar__link">About Us</a>
+        <a href="#work" class="navbar__link">Our Work</a>
+        <a href="#get-involved" class="navbar__link">Get Involved</a>
+        <a href="#contact" class="navbar__link">Contact Us</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#impact" class="btn btn--primary navbar__cta">Donate Now</a>
+        <button
+          class="navbar__toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__banner reveal">
+          <img
+            src="charity-assets/hero-banner.png"
+            alt="Volunteers supporting community members"
+            class="hero__banner-img"
+          />
+        </div>
+
+        <div class="hero__content reveal" data-delay="1">
+          <h1 class="hero__title">
+            Building
+            <span class="hero__hope-wrap">
+              <img
+                src="charity-assets/hope-highlight.svg"
+                alt=""
+                aria-hidden="true"
+                class="hero__hope-bg"
+              />
+              <span class="hero__hope-text">hope</span>
+            </span>
+            for a better<br />tomorrow
+          </h1>
+
+          <div class="hero__right">
+            <p class="hero__desc">
+              We stand beside people in need and work every day to bring food care
+              education and safety to families who have been forgotten
+            </p>
+            <form class="hero__search" id="causeSearchForm" role="search">
+              <div class="hero__search-input-wrap">
+                <img
+                  src="charity-assets/icon-search.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="hero__search-icon"
+                />
+                <input
+                  type="text"
+                  id="causeSearchInput"
+                  class="hero__search-input"
+                  placeholder="Find a cause that touches your heart"
+                  aria-label="Find a cause that touches your heart"
+                />
+              </div>
+              <button type="submit" class="hero__search-btn">Explore</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="stats" aria-label="Impact Statistics">
+      <img
+        src="charity-assets/stats-wave.svg"
+        alt=""
+        aria-hidden="true"
+        class="stats__wave"
+      />
+      <div class="container stats__grid">
+        <div class="stat-item reveal" data-delay="0">
+          <div class="stat-item__icon">
+            <img src="charity-assets/icon-stat-1.svg" alt="" width="24" height="24" />
+          </div>
+          <div class="stat-item__text">
+            <div class="stat-item__value" data-target="30000" data-suffix="+">30,000+</div>
+            <div class="stat-item__label">Lives Touched With Care</div>
+          </div>
+        </div>
+
+        <div class="stat-item reveal" data-delay="1">
+          <div class="stat-item__icon">
+            <img src="charity-assets/icon-stat-2.svg" alt="" width="24" height="24" />
+          </div>
+          <div class="stat-item__text">
+            <div class="stat-item__value" data-target="18500" data-suffix="+">18,500+</div>
+            <div class="stat-item__label">Medical Support Given</div>
+          </div>
+        </div>
+
+        <div class="stat-item reveal" data-delay="2">
+          <div class="stat-item__icon">
+            <img src="charity-assets/icon-stat-3.svg" alt="" width="24" height="24" />
+          </div>
+          <div class="stat-item__text">
+            <div class="stat-item__value" data-target="10200" data-suffix="+">10,200+</div>
+            <div class="stat-item__label">Children Received Education</div>
+          </div>
+        </div>
+
+        <div class="stat-item reveal" data-delay="3">
+          <div class="stat-item__icon">
+            <img src="charity-assets/icon-stat-4.svg" alt="" width="24" height="24" />
+          </div>
+          <div class="stat-item__text">
+            <div class="stat-item__value" data-target="150" data-suffix="+">150+</div>
+            <div class="stat-item__label">Communities Given Hope</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Causes Section -->
+    <section class="causes" id="causes">
+      <div class="container">
+        <div class="section-header section-header--centered reveal">
+          <h2 class="section-header__title">Find the Causes That Need You Most</h2>
+          <p class="section-header__subtitle">
+            Every small step you take today brings lasting change to someone’s tomorrow
+          </p>
+        </div>
+
+        <div class="causes__grid" id="causesGrid">
+          <article class="cause-card reveal" data-delay="0" data-keywords="education children child learn school books">
+            <div class="cause-card__img-wrap">
+              <img
+                src="charity-assets/cause-education.png"
+                alt="Children learning in classroom"
+                class="cause-card__img"
+              />
+            </div>
+            <h3 class="cause-card__title">Give Every Child a Chance to Learn</h3>
+            <p class="cause-card__desc">
+              Your support helps provide books safe classrooms and hope to children who
+              dream of a better life
+            </p>
+            <div class="cause-card__progress-track">
+              <div class="cause-card__progress-fill" data-width="54.1%" style="--target-width: 54.1%;"></div>
+            </div>
+            <div class="cause-card__meta">
+              <span class="cause-card__raised">$124,500 raised</span>
+              <span class="cause-card__days">6 days left</span>
+            </div>
+          </article>
+
+          <article class="cause-card reveal" data-delay="1" data-keywords="food feed families meal hunger">
+            <div class="cause-card__img-wrap">
+              <img
+                src="charity-assets/cause-food.png"
+                alt="Providing warm meals to families"
+                class="cause-card__img"
+              />
+            </div>
+            <h3 class="cause-card__title">Feed Families With Love and Care</h3>
+            <p class="cause-card__desc">
+              Each food pack you give places a warm meal on a family table and a smile on
+              tired faces
+            </p>
+            <div class="cause-card__progress-track">
+              <div class="cause-card__progress-fill" data-width="72.3%" style="--target-width: 72.3%;"></div>
+            </div>
+            <div class="cause-card__meta">
+              <span class="cause-card__raised">$91,200 raised</span>
+              <span class="cause-card__days">29 days left</span>
+            </div>
+          </article>
+
+          <article class="cause-card reveal" data-delay="2" data-keywords="nature planet green wildlife environment">
+            <div class="cause-card__img-wrap">
+              <img
+                src="charity-assets/cause-nature.png"
+                alt="Protecting nature and green spaces"
+                class="cause-card__img"
+              />
+            </div>
+            <h3 class="cause-card__title">Protect Nature for Future Generations</h3>
+            <p class="cause-card__desc">
+              Your contribution helps restore green spaces protect wildlife and keep our
+              planet alive
+            </p>
+            <div class="cause-card__progress-track">
+              <div class="cause-card__progress-fill" data-width="74.9%" style="--target-width: 74.9%;"></div>
+            </div>
+            <div class="cause-card__meta">
+              <span class="cause-card__raised">$233,400 raised</span>
+              <span class="cause-card__days">5 days left</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Mission Section -->
+    <section class="mission" id="about">
+      <div class="container mission__grid">
+        <div class="mission__media reveal">
+          <div class="mission__top-card">
+            <img
+              src="charity-assets/mission-1.png"
+              alt="Community fundraising and care"
+              class="mission__top-img"
+            />
+            <div class="mission__top-overlay"></div>
+            <div class="mission__tags">
+              <span class="mission__tag">Fundraising</span>
+              <span class="mission__tag">Community Care</span>
+            </div>
+          </div>
+
+          <div class="mission__bottom-row">
+            <div class="mission__stat-card">
+              <img
+                src="charity-assets/icon-mission.svg"
+                alt=""
+                width="34"
+                height="32"
+                class="mission__stat-icon"
+              />
+              <div class="mission__stat-number">52%</div>
+              <p class="mission__stat-desc">
+                Of children in vulnerable areas still struggle to get basic education
+              </p>
+            </div>
+
+            <div class="mission__photo-card">
+              <img
+                src="charity-assets/mission-2.png"
+                alt="Children smiling in community"
+                class="mission__photo-img"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mission__content reveal" data-delay="1">
+          <h2 class="mission__title">
+            Your kindness today can shape a brighter tomorrow
+          </h2>
+          <p class="mission__desc">
+            Giving is more than an act of support. It is a promise of hope for families
+            children and communities who are fighting every day for a better life. Through
+            education health care clean food and shelter we help turn hardship into
+            opportunity and fear into confidence across the world
+          </p>
+          <a href="#impact" class="mission__link">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact & Donation Form Section -->
+    <section class="impact" id="impact">
+      <div class="container impact__grid">
+        <div class="impact__feature reveal">
+          <img
+            src="charity-assets/impact-water-621b0e.png"
+            alt="Clean water bringing life back to the community"
+            class="impact__feature-img"
+          />
+          <div class="impact__feature-card">
+            <h3 class="impact__feature-title">
+              Clean Water Brings Life Back to the Community
+            </h3>
+            <div class="impact__feature-meta">
+              <span class="impact__meta-item">
+                <img src="charity-assets/icon-calendar.svg" alt="" width="20" height="20" />
+                <span>12 Feb 2025</span>
+              </span>
+              <span class="impact__meta-item">
+                <img src="charity-assets/icon-clock.svg" alt="" width="20" height="20" />
+                <span>2 min read</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact__donate-box reveal" data-delay="1">
+          <h2 class="impact__donate-title">Make an Impact Today</h2>
+          <p class="impact__donate-desc">
+            Your kindness today can create real change. A small donation can help families
+            access clean water food medical care and education.
+          </p>
+
+          <form class="donate-form" id="donateForm" novalidate>
+            <div class="donate-form__card">
+              <div class="donate-form__tabs" role="tablist">
+                <button
+                  type="button"
+                  class="donate-form__tab donate-form__tab--active"
+                  data-tab="general"
+                  role="tab"
+                  aria-selected="true"
+                >
+                  General donation
+                </button>
+                <button
+                  type="button"
+                  class="donate-form__tab"
+                  data-tab="specific"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  To a specific cause
+                </button>
+              </div>
+              <div class="donate-form__tab-track">
+                <div class="donate-form__tab-indicator" id="donateTabIndicator"></div>
+              </div>
+
+              <div class="donate-form__row">
+                <input
+                  type="email"
+                  id="donorEmail"
+                  class="donate-form__input"
+                  placeholder="Enter your email"
+                  aria-label="Enter your email"
+                  required
+                />
+                <div class="donate-form__select-wrap">
+                  <select
+                    id="donateFrequency"
+                    class="donate-form__select"
+                    aria-label="Donation frequency"
+                  >
+                    <option value="once">Give once</option>
+                    <option value="monthly">Give monthly</option>
+                  </select>
+                  <img
+                    src="charity-assets/icon-chevron-down.svg"
+                    alt=""
+                    aria-hidden="true"
+                    class="donate-form__chevron"
+                  />
+                </div>
+              </div>
+
+              <div class="donate-form__amount-wrap">
+                <img
+                  src="charity-assets/icon-dollar.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="donate-form__dollar"
+                />
+                <span class="donate-form__divider" aria-hidden="true"></span>
+                <input
+                  type="number"
+                  id="donateAmount"
+                  class="donate-form__amount-input"
+                  placeholder="Amount"
+                  min="1"
+                  aria-label="Donation amount"
+                  required
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="donate-form__submit">
+              Donate with Google Pay
+            </button>
+            <p class="donate-form__feedback" id="donateFeedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Latest News and Stories -->
+    <section class="news" id="work">
+      <div class="container">
+        <div class="news__header reveal">
+          <h2 class="news__heading">Our Latest News and Stories</h2>
+          <p class="news__intro">
+            We believe that every act of compassion creates a small wave of hope. These
+            stories reflect our journey to support communities with care dignity and
+            essential resources.
+          </p>
+        </div>
+
+        <div class="news__grid">
+          <article class="news-card reveal" data-delay="0">
+            <div class="news-card__img-wrap">
+              <img
+                src="charity-assets/news-1.png"
+                alt="Warm Meals Shared With Homeless Families"
+                class="news-card__img"
+              />
+            </div>
+            <div class="news-card__body">
+              <time class="news-card__date">January 20, 2025</time>
+              <h3 class="news-card__title">Warm Meals Shared With Homeless Families</h3>
+              <p class="news-card__desc">
+                A simple meal can bring comfort and remind someone that they are not alone.
+                Our volunteers spent the day preparing warm food for families fighting
+                cold nights and hunger.
+              </p>
+            </div>
+          </article>
+
+          <article class="news-card reveal" data-delay="1">
+            <div class="news-card__img-wrap">
+              <img
+                src="charity-assets/news-2.png"
+                alt="Youth Volunteers Lead Winter Clothing Drive"
+                class="news-card__img"
+              />
+            </div>
+            <div class="news-card__body">
+              <time class="news-card__date">January 12, 2025</time>
+              <h3 class="news-card__title">Youth Volunteers Lead Winter Clothing Drive</h3>
+              <p class="news-card__desc">
+                Young hearts came together to collect jackets blankets and scarves. Their
+                effort brought warmth to hundreds of children who struggle to stay
+                protected during winter.
+              </p>
+            </div>
+          </article>
+
+          <article class="news-card reveal" data-delay="2">
+            <div class="news-card__img-wrap">
+              <img
+                src="charity-assets/news-3.png"
+                alt="Community Garden Project Brings Fresh Hope"
+                class="news-card__img"
+              />
+            </div>
+            <div class="news-card__body">
+              <time class="news-card__date">January 5, 2025</time>
+              <h3 class="news-card__title">Community Garden Project Brings Fresh Hope</h3>
+              <p class="news-card__desc">
+                Local families joined hands to build a small garden that now grows fresh
+                vegetables for elderly residents. It is a reminder that unity can nourish
+                both body and soul.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stories of Lives Changed -->
+    <section class="stories">
+      <div class="container">
+        <div class="section-header section-header--centered reveal">
+          <h2 class="section-header__title">Stories of Lives Changed</h2>
+          <p class="section-header__subtitle">
+            Every act of kindness creates a story of hope. These voices reflect the lives
+            you help transform every day.
+          </p>
+        </div>
+
+        <div class="stories__controls reveal">
+          <button
+            type="button"
+            class="stories__arrow stories__arrow--prev"
+            id="storiesPrev"
+            aria-label="Previous stories"
+          >
+            <img src="charity-assets/icon-arrow-left.svg" alt="" width="24" height="24" />
+          </button>
+          <button
+            type="button"
+            class="stories__arrow stories__arrow--next"
+            id="storiesNext"
+            aria-label="Next stories"
+          >
+            <img src="charity-assets/icon-arrow-right.svg" alt="" width="24" height="24" />
+          </button>
+        </div>
+
+        <div class="stories__grid" id="storiesGrid">
+          <article class="story-card reveal" data-delay="0">
+            <img
+              src="charity-assets/avatar-asha.png"
+              alt="Asha"
+              class="story-card__avatar"
+            />
+            <p class="story-card__quote">
+              “Before receiving help I struggled to access even basic medical care. The
+              volunteers guided me through treatment and supported me with kindness at
+              every step. Today I am healthy again and able to take care of my children
+              with hope in my heart.”
+            </p>
+            <div class="story-card__author">
+              <div class="story-card__name">Asha, 29 years</div>
+              <div class="story-card__program">Community Health Support</div>
+            </div>
+          </article>
+
+          <article class="story-card story-card--media reveal" data-delay="1">
+            <img
+              src="charity-assets/story-video.png"
+              alt="Community story video preview"
+              class="story-card__media-img"
+            />
+            <button
+              type="button"
+              class="story-card__play-btn"
+              aria-label="Play story preview"
+            >
+              <img src="charity-assets/icon-play.svg" alt="" width="24" height="24" />
+            </button>
+          </article>
+
+          <article class="story-card reveal" data-delay="2">
+            <img
+              src="charity-assets/avatar-rahim.png"
+              alt="Rahim"
+              class="story-card__avatar"
+            />
+            <p class="story-card__quote">
+              “When the new water well was built in our village everything changed. My
+              family no longer walks long distances for water and my children can finally
+              go to school on time. This support gave us more than clean water. It gave us
+              a second chance.”
+            </p>
+            <div class="story-card__author">
+              <div class="story-card__name">Rahim, 31 years</div>
+              <div class="story-card__program">Clean Water Project Beneficiary</div>
+            </div>
+          </article>
+
+          <article class="story-card reveal" data-delay="3">
+            <img
+              src="charity-assets/avatar-maya-1f728f.png"
+              alt="Maya"
+              class="story-card__avatar"
+            />
+            <p class="story-card__quote">
+              “I needed help to feed my family during a very hard time. The food packages
+              came when we had nothing left at home. The compassion I felt reminded me
+              that we are not forgotten. It gave me strength to start rebuilding my life.”
+            </p>
+            <div class="story-card__author">
+              <div class="story-card__name">Maya, 42 years</div>
+              <div class="story-card__program">Food Assistance Program</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="faq">
+      <div class="container">
+        <div class="section-header section-header--centered reveal">
+          <h2 class="section-header__title">Frequently Asked Questions</h2>
+          <p class="section-header__subtitle">
+            Trusted by more than 1000 supporters who believe in helping communities grow
+            with dignity and hope
+          </p>
+        </div>
+
+        <div class="faq__pills reveal" role="tablist" aria-label="FAQ categories">
+          <button type="button" class="faq__pill faq__pill--active" data-faq-cat="about">
+            About us
+          </button>
+          <button type="button" class="faq__pill" data-faq-cat="work">Our work</button>
+          <button type="button" class="faq__pill" data-faq-cat="support">Support</button>
+        </div>
+
+        <div class="faq__list reveal" id="faqList">
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__question">
+                How does my donation create real impact
+              </span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <img src="charity-assets/icon-plus.svg" alt="" class="faq-icon-plus" />
+                <img src="charity-assets/icon-minus.svg" alt="" class="faq-icon-minus" />
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <p class="faq-item__answer">
+                Every contribution goes directly toward funding local education, clean
+                water wells, nutritious meals, and essential healthcare programs led by
+                our community teams.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item faq-item--open">
+            <button type="button" class="faq-item__trigger" aria-expanded="true">
+              <span class="faq-item__question">
+                Can I choose which cause I want to support
+              </span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <img src="charity-assets/icon-plus.svg" alt="" class="faq-icon-plus" />
+                <img src="charity-assets/icon-minus.svg" alt="" class="faq-icon-minus" />
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <p class="faq-item__answer">
+                Yes you can select any specific project that speaks to your heart. Whether
+                it is helping children learn protecting nature or supporting families
+                during crisis your donation will go exactly where you choose.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__question">
+                Will I receive updates about the projects I support
+              </span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <img src="charity-assets/icon-plus.svg" alt="" class="faq-icon-plus" />
+                <img src="charity-assets/icon-minus.svg" alt="" class="faq-icon-minus" />
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <p class="faq-item__answer">
+                Yes, we send regular progress stories, field photos, and transparent impact
+                reports to your email so you can see how your support is helping.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__question">Is my donation secure</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <img src="charity-assets/icon-plus.svg" alt="" class="faq-icon-plus" />
+                <img src="charity-assets/icon-minus.svg" alt="" class="faq-icon-minus" />
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <p class="faq-item__answer">
+                All donations are processed through encrypted payment gateways with strict
+                privacy and security standards to keep your information safe.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__question">Can I volunteer instead of donating</span>
+              <span class="faq-item__icon" aria-hidden="true">
+                <img src="charity-assets/icon-plus.svg" alt="" class="faq-icon-plus" />
+                <img src="charity-assets/icon-minus.svg" alt="" class="faq-icon-minus" />
+              </span>
+            </button>
+            <div class="faq-item__panel">
+              <p class="faq-item__answer">
+                Absolutely. You can join our local food drives, clothing collections,
+                community gardens, or tutoring initiatives by reaching out through our
+                contact details below.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Our Movement Banner -->
+    <section class="movement" id="get-involved">
+      <div class="container movement__grid">
+        <div class="movement__content reveal">
+          <h2 class="movement__title">
+            Join us in the mission to uplift communities and change lives
+          </h2>
+          <p class="movement__desc">
+            Every act of compassion creates a spark of hope. Together we can support
+            families rebuild futures and bring dignity to those who need it most.
+          </p>
+          <a href="#impact" class="btn btn--yellow movement__cta">Join Our Movement</a>
+        </div>
+
+        <div class="movement__orbit reveal" data-delay="1" aria-label="9,364+ joined our community">
+          <div class="movement__ring movement__ring--outer"></div>
+          <div class="movement__ring movement__ring--middle"></div>
+          <div class="movement__center">
+            <div class="movement__count">9,364+</div>
+            <div class="movement__count-label">joined our<br />community</div>
+          </div>
+
+          <img
+            src="charity-assets/community-1.png"
+            alt="Community member"
+            class="movement__avatar movement__avatar--1"
+          />
+          <img
+            src="charity-assets/community-2.png"
+            alt="Community member"
+            class="movement__avatar movement__avatar--2"
+          />
+          <img
+            src="charity-assets/community-3-6db442.png"
+            alt="Community member"
+            class="movement__avatar movement__avatar--3"
+          />
+          <img
+            src="charity-assets/community-4-2431c0.png"
+            alt="Community member"
+            class="movement__avatar movement__avatar--4"
+          />
+          <img
+            src="charity-assets/community-5-592cf7.png"
+            alt="Community member"
+            class="movement__avatar movement__avatar--5"
+          />
+          <img
+            src="charity-assets/community-6-602e6f.png"
+            alt="Community member"
+            class="movement__avatar movement__avatar--6"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div class="footer__left">
+        <a href="#top" class="footer__logo" aria-label="HopeBridge">
+          <img src="charity-assets/logo-footer.svg" alt="HopeBridge" width="184" height="32" />
+        </a>
+
+        <div class="footer__contacts">
+          <div class="footer__contact-item">
+            <span class="footer__contact-label">Email</span>
+            <a href="mailto:support@hopebridge.org" class="footer__contact-value">
+              support@hopebridge.org
+            </a>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-label">Phone Number</span>
+            <a href="tel:+12048953801" class="footer__contact-value">
+              +1 (204) 895 3801
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__right">
+        <h2 class="footer__title">Be a part of meaningful change today</h2>
+        <p class="footer__desc">
+          Your support helps provide food education clean water and protection to families
+          who are fighting every day for a better tomorrow.
+        </p>
+        <div class="footer__actions">
+          <a href="#impact" class="btn btn--primary">Donate Now</a>
+          <a href="#about" class="btn btn--outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
